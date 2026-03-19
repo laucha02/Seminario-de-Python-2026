@@ -1,20 +1,39 @@
 import random
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
-word = random.choice(words)
+dic = {
+    'Informatica': ['python', 'programa', 'variable', 'funcion', 'bucle', 'cadena', 'entero', 'lista'],
+    'Paises': ['argentina', 'bolivia', 'surinam', 'belice', 'china', 'francia'],
+    'Colores': ['rojo', 'verde', 'violeta', 'amarillo', 'rosa', 'celeste'],
+    'Marcas': ['sony', 'guillete', 'chevrolet', 'logitech'],
+}
+category_names = [
+                'Informatica',
+                'Paises',
+                'Colores',
+                'Marcas'
+                ]
 guessed = []
 attempts = 6
 total_points = 0
 print("¡Bienvenido al Ahorcado!")
-print()
+print('*' * 35)
+print("""      CATEGORÍAS
+    1. Informatica
+    2. Paises
+    3. Colores
+    4. Marcas""")
+print('*' * 35)
+while True:
+    try:
+        category = int(input("Por favor, elija el número de la categoría que desea utilizar: "))
+        if (1 <= category <= len(category_names)):
+            category_choosed = category_names[category-1]
+            print(f'Elegiste la categoría {category_choosed}')
+            word = random.choice(dic[category_choosed])
+            break
+        else:
+            print('ERROR: número no valido.')
+    except ValueError:
+        print('ERROR: no ingresaste un número. ')
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
     progress = ""
