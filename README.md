@@ -4,7 +4,10 @@
 
 **Entregable 1**
 
-[Funcionalidad 1](funcionalidad-1)
+- [Funcionalidad 1](#funcionalidad-1)
+- [Funcionalidad 2](#funcionalidad-2)
+- [Funcionalidad 3](#funcionalidad-3)
+- [Funcionalidad 4](#funcionalidad-4)
 
 ## Entregable Práctica 1
 
