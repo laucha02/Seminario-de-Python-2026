@@ -1,38 +1,44 @@
 # Seminario de Python 2026
 
-Acá voy a detallar qué cambios ocurrieron en cada commit, ya que son varias lineas que se modificaron o se añadieron.
+## Temario
 
-## Funcionalidad 1
+**Entregable 1**
 
-### Consigna
+[Funcionalidad 1](funcionalidad-1)
+
+## Entregable Práctica 1
+
+### Funcionalidad 1
+
+#### Consigna
 
 El juego tiene un bug. Si el usuario ingresa más de una letra, un número o
 cualquier otro carácter inválido, el programa se comporta de manera inesperada. Modificalo para que en ese caso muestre el mensaje "Entrada no válida" y continúe el juego en la siguiente iteración.
 
-###  Resultado
+####  Resultado
 
 El resultado se encuentra en el commit [f445ab8](https://github.com/laucha02/Seminario-de-Python-2026/commit/f445ab8) "Agrego funcionalidad 1.".
 
 Primero, modifiqué la linea 32 para que todas las letras ingresadas sean convertidas a minúsculas.
 Luego, desde la linea 33 hasta la linea 35, creé una condición de que el carácter ingresado sea un carácter alfabético (y que no tenga acento, ya que estos tambien se encuentra dentro de los caracteres mencionados) y que ese string solo tenga un elemento. Si esta condición es falsa, entonces que vaya a la siguiente iteración y pregunta de vuelta por una letra.
 
-## Funcionalidad 2
-### Consigna
+### Funcionalidad 2
+#### Consigna
 
 Modificá el juego para que al final de la partida se muestre el puntaje del jugador. El puntaje se calcula de la siguiente forma: cada letra incorrecta resta 1 punto, adivinar la palabra completa suma 6 puntos, y perder deja el puntaje en 0.
 
-### Resultado
+#### Resultado
 
 El resultado se encuentra en el commit [63b9571](https://github.com/laucha02/Seminario-de-Python-2026/commit/63b9571) "Agrego funcionalidad 2".
 
 Creé la variable ```total_points``` de tipo int (linea 15) para que cuando es una letra incorrecta reste un punto (linea 46), cuando gane el ahorcado sume 6 puntos (linea 29), cuando pierda, el resultado de los puntos es 0 (linea 50) y al final de la partida, se visualice los puntos obtenidos (linea 53)
 
-## Funcionalidad 3
-### Consigna
+### Funcionalidad 3
+#### Consigna
 
 Modificá el juego para que las palabras estén agrupadas por categoría. Al inicio de cada partida, mostrar las categorías disponibles y permitir que el usuario elija una. Ayuda: utilizá un diccionario donde las claves sean los nombres de las categorías y los valores sean listas de palabras.
 
-### Resultado
+#### Resultado
 
 El resultado se encuentra en el commit [cf00ae0](https://github.com/laucha02/Seminario-de-Python-2026/commit/cf00ae0) "Agrego funcionalidad 3".
 
@@ -42,12 +48,12 @@ Creé una lista de strings ```category_played``` que son las categorías a elegi
 
 Ahora en la consola se visualizará un menú donde el usuario debe elegir el número de categoría (desde la linea 18 hasta la linea 24). Para controlar que efectivamente se haya ingresado un número correcto, se crea un ```while``` (linea 25) con bucle infinito. Dentro, con ```try``` y ```except```, se regula si el usuario ingresó un numero o si tira error ValueError, ya que la variable ```category``` convierte el string a un int, y ese error aparece cuando se quiere convertir un caracter que no es un número. Para salir del bucle infinito, se debe ingresar un numero que esté en el rango de 1 a 4, que sale de la cantidad de elementos en la lista ```category_names```. Cuando ingresa, para que linea 31 no sea muy extensa, lo dividí primero creando ```category_choosed``` que es un string y se calcula a partir del valor que está en la lista ```category_played``` en la posición ```category```, y como va de 0 a N, se debe restar 1. Ya obtenida la clave del diccionario, en la linea 31, se modifica la variable ```word``` para que busque correctamente en ella.
 
-## Funcionalidad 4
-### Consigna
+### Funcionalidad 4
+#### Consigna
 
 Modificá el juego para que, al jugar varias rondas seguidas, no se repita la misma palabra. Investigá la función random.sample() .
 
-### Resultado
+#### Resultado
 
 El resultado se encuentra en el commit [1637856](https://github.com/laucha02/Seminario-de-Python-2026/commit/1637856) "Agrego funcionalidad 4 (final)".
 
