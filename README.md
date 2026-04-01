@@ -2,12 +2,14 @@
 
 ## Temario
 
-**Entregable 1**
+### [Entregable Práctica 1](#entregable-práctica-1)
 
 - [Funcionalidad 1](#funcionalidad-1)
 - [Funcionalidad 2](#funcionalidad-2)
 - [Funcionalidad 3](#funcionalidad-3)
 - [Funcionalidad 4](#funcionalidad-4)
+
+### [Entregable Práctica 2](#instructivo-para-ejecutar-los-ejercicios)
 
 ## Entregable Práctica 1
 
@@ -73,3 +75,22 @@ Se mueve las variables ```guessed``` y ```attempts``` (linea 44 y 45) ya que se 
 
 Se modifica la variable ```word``` (linea 47)para que funcione correctamente con random.sample(poblacion es la lista que eligió el usuario, y k sería 1, porque solo quiero que me traiga un elemento) y como devuelve una lista de un único elemento, me posiciono en la primera posición que contiene la palabra elegida. Luego se elimina ese elemento (linea 48) de ```list_choosed```
 
+
+## Entregable Práctica 2
+
+### Instructivo para ejecutar los ejercicios
+
+#### Requisitos
+
+- Python 3.14.3 o superior
+- pip
+
+#### Instalar Jupyter
+
+1. Abrir terminal y posicionarse en el directorio donde quiere descargar este repositorio
+2. Clonar repositorio con ´´´git clone https://github.com/laucha02/Seminario-de-Python-2026´´´
+3. Posicionarse en la carpeta "Practica 2" con ´´´cd "Seminario-de-Python-2026\Practica 2"´´´
+4. Crear un entorno virtual con ´´´python -m venv .venv´´´
+5. Activar el entorno virtual, en Windows con ´´´.venv\Scripts\activate´´´, en Linux con ´´´source .venv/bin/activate´´´
+6. Instalar la dependencia Jupyter: ´´´pip install -r requirements.txt´´´
+7. Abrir Jupyter lab: ´´´jupyter lab´´´
