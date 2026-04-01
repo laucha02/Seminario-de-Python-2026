@@ -1,1 +1,5 @@
 Teorias/
+.venv/
+Practica 2/.venv/
+Practica 2/src/__pycache__/
+Practica 2/notebooks/.ipynb_checkpoints/
